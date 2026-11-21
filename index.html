@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WindowGlide — Switch to the exact window</title>
 <meta name="description" content="A window switcher for macOS: one shortcut for the current app's windows, another for every app. Brings forward only the window you pick, even across displays.">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 <link rel="icon" href="icon.png">
 </head>
 <body>
@@ -14,10 +14,11 @@
   <h1>WindowGlide</h1>
   <p class="lead">Switch to the exact window you want on macOS — including another window of the same app, on another display.</p>
   <p class="actions">
-    <a class="button" id="download" href="https://github.com/duboislee/windowglide/releases/latest">Download free trial</a>
-    <a class="button secondary" id="buy" aria-disabled="true">Buy — US$9.99</a>
+    <a class="button" id="download" role="link" aria-disabled="true">Download free trial</a>
+    <button class="button secondary" id="buy" type="button" disabled>Buy — US$9.99</button>
   </p>
-  <p class="note">7-day free trial with every feature. One-time purchase, no subscription. macOS 14 or later, Apple Silicon and Intel.</p>
+  <p id="buy-status" class="note" role="status">The trial download and checkout aren't open yet.</p>
+  <p class="note">7-day free trial with every feature. One-time purchase, no subscription. macOS 14 or later.</p>
 </header>
 
 <main class="wrap">
@@ -56,11 +57,11 @@
   <section>
     <h2>Questions</h2>
     <h3>What happens after the trial?</h3>
-    <p>Window switching stops until you enter a license key. Your settings are kept.</p>
+    <p>Window switching pauses until you activate a license. Your settings are kept.</p>
     <h3>How many Macs can I use?</h3>
-    <p>A license is for one person, on the Macs they use.</p>
+    <p>Each purchase activates one Mac. First activation needs an internet connection. After that, you can switch windows offline and use the same code to reactivate the original Mac.</p>
     <h3>Why isn't it on the Mac App Store?</h3>
-    <p>App Store apps must run in the App Sandbox, which does not allow switching to a specific window of another app. WindowGlide is signed and notarized by Apple for direct download instead.</p>
+    <p>WindowGlide needs access to focus the exact window you choose. We’re preparing a direct Mac download.</p>
     <h3>Refunds?</h3>
     <p>Full refund within 30 days of purchase. See the <a href="terms.html#refunds">refund policy</a>.</p>
   </section>
@@ -70,6 +71,6 @@
   <a href="terms.html">Terms &amp; Refunds</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:duboislee1988@gmail.com">Support</a>
   <p>Our order process is conducted by our online reseller Paddle.com, the Merchant of Record for all our orders.</p>
 </footer>
-<script src="checkout.js"></script>
+<script type="module" src="checkout.js?v=4"></script>
 </body>
 </html>
